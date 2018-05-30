@@ -215,6 +215,16 @@ class PostDetailView(DetailView):
         context = super(PostDetailView, self).get_context_data(**kwargs)
         form = CommentForm()
         comment_list = self.object.comment_set.all()
+        md = markdown.Markdown(extensions=[
+            'markdown.extensions.extra',
+            'markdown.extensions.codehilite',
+            'markdown.extensions.fenced_code',
+            'markdown.extensions.tables',
+            TocExtension(slugify=slugify),
+        ])
+        for comment in comment_list:
+            comment.text = md.convert(comment.text)
+
         context.update({
             'form': form,
             'comment_list': comment_list
