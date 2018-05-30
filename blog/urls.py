@@ -1,7 +1,7 @@
 __author__ = 'hhuua'
 
 from . import views
-from django.urls import path
+from django.urls import path, re_path
 
 # base_path = /blog/
 app_name = 'blog'
