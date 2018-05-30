@@ -201,7 +201,7 @@ class PostDetailView(DetailView):
         md = markdown.Markdown(extensions=[
             'markdown.extensions.extra',
             'markdown.extensions.codehilite',
-            # 'markdown.extensions.toc',
+            'markdown.extensions.fenced_code',
             TocExtension(slugify=slugify),
         ])
         post.body = md.convert(post.body)
