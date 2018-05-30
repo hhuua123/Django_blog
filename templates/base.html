@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'blog/css/pace.css' %}">
     <link rel="stylesheet" href="{% static 'blog/css/custom.css' %}">
-    <link rel="stylesheet" href="{% static 'blog/css/highlights/github.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/highlights/friendly.css' %}">
     <!-- js -->
     <script src="https://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -23,11 +23,15 @@
         span.highlighted {
             color: red;
         }
-        .codehilite .err{
-            color: #000000;
-            background-color: rgba(0,0,0,0);
-        }
     </style>
+
+    <script>
+        $(document).ready(function(){
+            {#取消markdown语法错误时的红色边框及变色处理#}
+            $('.codehilite .err').css('color','#000000').css('background-color','rgba(0,0,0,0)').css('border-style','none');
+            $('.codehilite .gr').css('color','#000000').css('background-color','rgba(0,0,0,0)').css('border-style','none');
+        });
+    </script>
 </head>
 
 <body>
