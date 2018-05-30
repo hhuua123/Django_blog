@@ -20,4 +20,5 @@ urlpatterns = [
     re_path(r'^admin/', admin.site.urls),
     re_path(r'', include('blog.urls')),
     re_path(r'', include('comments.urls')),
+    re_path(r'^search/', include('haystack.urls')),
 ]
