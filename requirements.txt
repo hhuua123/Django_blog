@@ -14,6 +14,7 @@ constantly==15.1.0
 cryptography==2.2.2
 cssselect==1.0.3
 Django==2.0.5
+django-haystack==2.8.1
 et-xmlfile==1.0.1
 Flask==1.0.2
 hyperlink==18.0.0
@@ -21,6 +22,7 @@ idna==2.6
 incremental==17.5.0
 itsdangerous==0.24
 jdcal==1.4
+jieba==0.39
 Jinja2==2.10
 lxml==4.2.1
 Markdown==2.6.11
@@ -51,5 +53,6 @@ Twisted==18.4.0
 urllib3==1.22
 w3lib==1.19.0
 Werkzeug==0.14.1
+Whoosh==2.7.4
 yarl==1.2.4
 zope.interface==4.5.0
