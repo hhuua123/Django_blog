@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'x7wqh3$a7m#09r$^jgzr4#&5--#0%@^v3t0jdmgz%ss-sf&4$5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', 'blog.hhuua.com']
 
@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', 'blog.hhuua.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'haystack',
+    # 'haystack',
     'blog',
     'comments',
     'django.contrib.admin',
@@ -131,11 +131,11 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # 搜索分词系统配置
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        'ENGINE': 'blog.whoosh_cn_backend.WhooshEngine',
-        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
-    },
-}
-HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
-HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+# HAYSTACK_CONNECTIONS = {
+#     'default': {
+#         'ENGINE': 'blog.whoosh_cn_backend.WhooshEngine',
+#         'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+#     },
+# }
+# HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
+# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'

@@ -23,6 +23,10 @@
         span.highlighted {
             color: red;
         }
+
+        .container{
+            width: 100%;
+        }
     </style>
 
     <script>
@@ -40,7 +44,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-5 col-xs-8">
                 <div class="logo">
-                    <h1><a href="{% url 'blog:index' %}"><b>Black</b> &amp; White</a></h1>
+                    <h1><a href="{% url 'blog:index' %}"><b>Hhuua</b> &amp; Blog</a></h1>
                 </div>
             </div><!-- col-md-4 -->
             <div class="col-md-8 col-sm-7 col-xs-4">
@@ -63,7 +67,7 @@
                 <div id="header-search-box">
                     <a id="search-menu" href="#"><span id="search-icon" class="ion-ios-search-strong"></span></a>
                     <div id="search-form" class="search-form">
-                        <form role="search" method="get" id="searchform" action="{% url 'haystack_search' %}">
+                        <form role="search" method="get" id="searchform" action="#">
                             <input type="search" name="q" placeholder="搜索" required>
                             <button type="submit"><span class="ion-ios-search-strong"></span></button>
                         </form>
@@ -79,11 +83,11 @@
 <div class="content-body">
     <div class="container">
         <div class="row">
-            <main class="col-md-8">
+            <main class="col-md-9 col-sm-12 col-xs-12">
                 {% block main %}
                 {% endblock main %}
             </main>
-            <aside class="col-md-4">
+            <aside class="col-md-3 hidden-sm hidden-xs">
                 {% block toc %}
                 {% endblock toc %}
                 <div class="widget widget-recent-posts">
@@ -159,10 +163,10 @@
     <button type="button" class="overlay-close"><span class="ion-ios-close-empty"></span></button>
     <nav>
         <ul>
-            <li><a href="index.html">首页</a></li>
-            <li><a href="full-width.html">博客</a></li>
-            <li><a href="about.html">关于</a></li>
-            <li><a href="contact.html">联系</a></li>
+            <li><a href="{% url 'blog:index' %}">首页</a></li>
+            <li><a href="#">博客</a></li>
+            <li><a href="#">关于</a></li>
+            <li><a href="#">联系</a></li>
         </ul>
     </nav>
 </div>
