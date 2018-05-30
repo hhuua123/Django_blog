@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from blog.models import Post
-
+import markdown
 from .models import Comment
 from .forms import CommentForm
 
@@ -43,7 +43,9 @@ def post_comment(request, post_pk):
             # 因为 Post 和 Comment 是 ForeignKey 关联的，
             # 因此使用 post.comment_set.all() 反向查询全部评论。
             # 具体请看下面的讲解。
+
             comment_list = post.comment_set.all()
+
             context = {'post': post,
                        'form': form,
                        'comment_list': comment_list

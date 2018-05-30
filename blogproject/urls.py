@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 
 urlpatterns = [
-    re_path(r'admin/', admin.site.urls),
-    re_path(r'post/', include('blog.urls')),
-    path(r'', include('comments.urls')),
+    re_path(r'^admin/', admin.site.urls),
+    re_path(r'', include('blog.urls')),
+    re_path(r'', include('comments.urls')),
+    re_path(r'^search/', include('haystack.urls')),
 ]
