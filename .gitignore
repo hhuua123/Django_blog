@@ -2,3 +2,4 @@
 venv/
 *.py[cod]
 fabfile.py
+whoosh_index/
