@@ -202,6 +202,7 @@ class PostDetailView(DetailView):
             'markdown.extensions.extra',
             'markdown.extensions.codehilite',
             'markdown.extensions.fenced_code',
+            'markdown.extensions.tables',
             TocExtension(slugify=slugify),
         ])
         post.body = md.convert(post.body)
