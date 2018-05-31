@@ -15,17 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from defaults import views
-import django.conf.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog.urls')),
     path('', include('comments.urls')),
+    path('', include('defaults.urls'))
     # re_path(r'^search/', include('haystack.urls')),
 ]
-
-django.conf.urls.handler403 = views.defaults_403
-django.conf.urls.handler400 = views.defaults_400
-django.conf.urls.handler404 = views.defaults_404
-django.conf.urls.handler500 = views.defaults_500

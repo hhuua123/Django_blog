@@ -7,7 +7,6 @@ from comments.forms import CommentForm
 from django.views.generic import ListView, DetailView
 from django.utils.text import slugify
 from markdown.extensions.toc import TocExtension
-from django.db.models import Q
 
 class IndexView(ListView):
     model = Post
