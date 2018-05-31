@@ -51,7 +51,7 @@ class Post(models.Model):
             md = markdown.Markdown(extensions=[
                 'markdown.extensions.extra',
             ])
-            self.excerpt = strip_tags(md.convert(self.body))[:100]
+            self.excerpt = strip_tags(md.convert(self.body))[:300]
 
         super(Post, self).save(*args, **kwargs)
 
