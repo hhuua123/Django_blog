@@ -165,9 +165,7 @@ class ArchivesView(IndexView):
     def get_queryset(self):
         year = self.kwargs.get('year')
         month = self.kwargs.get('month')
-        return super(ArchivesView, self).get_queryset().filter(created_time__year=year,
-                                                                created_time__month=month,
-                                                               )
+        return super(ArchivesView, self).get_queryset().filter(created_time__year=year, created_time__month=month)
 
 # def archives(request, year, month):
 #     post_list = Post.objects.filter(created_time__year=year,

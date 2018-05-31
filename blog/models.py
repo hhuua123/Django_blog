@@ -58,7 +58,7 @@ class Post(models.Model):
     # 浏览量加一
     def increase_views(self):
         self.views += 1
-        # 告诉Django，只更新views模块,以增加处理速度
+        # 告诉Django，只更新views的数据,以增加数据库处理速度
         self.save(update_fields=['views'])
 
     def __str__(self):
