@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block head %}
+<script>$(document).ready(function(){$('.codehilite .err').css('color','#000000').css('background-color','rgba(0,0,0,0)').css('border-style','none');$('.codehilite .gr').css('color','#000000').css('background-color','rgba(0,0,0,0)').css('border-style','none');});</script>
+{%  endblock %}
+
 {% block main %}
     <article class="post post-1">
         <header class="entry-header">
