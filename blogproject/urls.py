@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls import handler404
+from defaults import views
+import django.conf.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,7 @@ urlpatterns = [
     # re_path(r'^search/', include('haystack.urls')),
 ]
 
-handler404 = "defaults.views"
+django.conf.urls.handler403 = views.defaults_403
+django.conf.urls.handler400 = views.defaults_400
+django.conf.urls.handler404 = views.defaults_404
+django.conf.urls.handler500 = views.defaults_500
