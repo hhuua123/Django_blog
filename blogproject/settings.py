@@ -25,8 +25,7 @@ SECRET_KEY = 'x7wqh3$a7m#09r$^jgzr4#&5--#0%@^v3t0jdmgz%ss-sf&4$5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', 'blog.hhuua.com']
-
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.hhuua.com']
 
 # Application definition
 
