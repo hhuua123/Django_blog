@@ -1,9 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from blog.models import Post
-import markdown
-from .models import Comment
 from .forms import CommentForm
 
+# 获取文章下的评论
 def post_comment(request, post_pk):
     # 先获取被评论的文章，因为后面需要把评论和被评论的文章关联起来。
     # 这里我们使用了 Django 提供的一个快捷函数 get_object_or_404，

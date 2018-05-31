@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls import handler404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,3 +23,5 @@ urlpatterns = [
     path('', include('comments.urls')),
     # re_path(r'^search/', include('haystack.urls')),
 ]
+
+handler404 = "defaults.views"

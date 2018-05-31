@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.hhuua.com']
 
 INSTALLED_APPS = [
     # 'haystack',
+    'defaults',
     'blog',
     'comments',
     'django.contrib.admin',
