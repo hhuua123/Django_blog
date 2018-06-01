@@ -6,6 +6,7 @@ from django.urls import reverse
 import markdown
 from django.utils.html import strip_tags
 
+
 # 分类,文章的分类
 class Category(models.Model):
     # 分类名
@@ -14,6 +15,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+
 # 标签,文章的标签
 class Tag(models.Model):
     # 标签名
@@ -21,6 +23,7 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.name
+
 
 # 文章
 class Post(models.Model):
