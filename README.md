@@ -2,4 +2,4 @@
 
 持续开发中
 
-[项目测试地址](http://www.hhuua.com:8000/)
+[项目测试地址](http://blog.hhuua.com/)
