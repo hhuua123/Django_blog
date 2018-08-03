@@ -8,6 +8,7 @@ from django.views.generic import ListView, DetailView
 from django.utils.text import slugify
 from markdown.extensions.toc import TocExtension
 
+
 class IndexView(ListView):
     model = Post
     template_name = 'blog/index.html'
@@ -31,6 +32,7 @@ class IndexView(ListView):
         # 将更新后的 context 返回，以便 ListView 使用这个字典中的模板变量去渲染模板。
         # 注意此时 context 字典中已有了显示分页导航条所需的数据。
         return context
+
     def pagination_data(self, paginator, page, is_paginated):
         if not is_paginated:
             # 如果没有分页，则无需显示分页导航条
@@ -104,16 +106,19 @@ class IndexView(ListView):
 
         return data
 
+
 class CategoryView(IndexView):
     def get_queryset(self):
         cate = get_object_or_404(Category, pk=self.kwargs.get('pk'))
         return super(CategoryView, self).get_queryset().filter(category=cate)
+
 
 class ArchivesView(IndexView):
     def get_queryset(self):
         year = self.kwargs.get('year')
         month = self.kwargs.get('month')
         return super(ArchivesView, self).get_queryset().filter(created_time__year=year, created_time__month=month)
+
 
 class PostDetailView(DetailView):
     model = Post
@@ -165,6 +170,7 @@ class PostDetailView(DetailView):
         })
         # 返回新的context
         return context
+
 
 class TagView(ListView):
     model = Post

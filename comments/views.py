@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from blog.models import Post
 from .forms import CommentForm
 
+
 def post_comment(request, post_pk):
     # 获取主键为post_pk的文章,如无法获取,则直接抛出404页面
     post = get_object_or_404(Post, pk=post_pk)
